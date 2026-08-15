@@ -7,6 +7,7 @@ const { v4: uuidv4 } = require('uuid');
 require('dotenv').config();
 
 const app = express();
+app.set('trust proxy', 1); // Trust Render's reverse proxy
 app.use(express.json());
 app.use(helmet());
 
